@@ -22,6 +22,8 @@
 		
 			@yield('content')
 
+			@include('footer')
+
 		</div>
 
 		@yield('postCarga')

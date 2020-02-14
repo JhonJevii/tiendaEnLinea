@@ -31,7 +31,7 @@
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
 					<div class="cart_icon"><a href="cart.html">
-						<img src="primeraPlantilla/images/bag.png" alt="">
+						<img src="images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
 				</div>
@@ -107,7 +107,7 @@
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
 			<div class="cart_icon"><a href="cart.html">
-				<img src="primeraPlantilla/images/bag.png" alt="">
+				<img src="images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
 			<div class="cart_text">bag</div>
