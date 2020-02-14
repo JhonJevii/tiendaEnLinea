@@ -26,7 +26,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 		</div>
 	</div>
 
-  <!-- Boxes -->
+  <!-- Categories -->
   
   <div class="boxes">
     <div class="section_container">
@@ -106,24 +106,33 @@
     </div>
   </div>
 
-  <!-- Categories -->
-
-  <div class="categories">
-    <div class="section_container">
+  <!-- ================ trending product section start ================= -->  
+    <section class="section-margin calc-60px">
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <div class="categories_list_container">
-              <ul class="categories_list d-flex flex-row align-items-center justify-content-start">
-                <li><a href="categories.html">new arrivals</a></li>
-                <li><a href="categories.html">recommended</a></li>
-                <li><a href="categories.html">best sellers</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="section-intro pb-60px">
+          <p>Popular Item in the market</p>
+          <h2>Trending <span class="section-intro__style">Product</span></h2>
         </div>
-      </div>
-    </div>
-  </div>
+
+	      <div class="col-md-6 col-lg-4 col-xl-3">
+	        <div class="card text-center card-product">
+	          <div class="card-product__img">
+	            <img class="card-img" src="img/product/product5.png" alt="">
+	            <ul class="card-product__imgOverlay">
+	              <li><button><i class="ti-search"></i></button></li>
+	              <li><button><i class="ti-shopping-cart"></i></button></li>
+	              <li><button><i class="ti-heart"></i></button></li>
+	            </ul>
+	          </div>
+	          <div class="card-body">
+	            <p>Accessories</p>
+	            <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+	            <p class="card-product__price">$150.00</p>
+	          </div>
+	        </div>
+	      </div>
+	  </div>
+    </section>
+    <!-- ================ trending product section end ================= --> 
 
 @endsection
