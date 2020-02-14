@@ -18,6 +18,7 @@
 
 		@yield('sideMenu')
 
+
 		<div class="super_container">
 		
 			@yield('content')
