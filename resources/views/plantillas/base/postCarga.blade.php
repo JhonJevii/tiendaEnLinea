@@ -2,8 +2,8 @@
 	
 	<!----------------------Side menu---------------------------------------------->
 	<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-	<script src="{{ asset('css/popper.js') }}"></script>
-	<script src="{{ asset('css/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/popper.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('js/custom.js') }}"></script>
 	<script src="{{ asset('plugins/scrollmagic/ScrollMagic.min.js') }}"></script>
 	<script src="{{ asset('plugins/greensock/animation.gsap.min.js') }}"></script>
