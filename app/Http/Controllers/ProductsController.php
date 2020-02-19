@@ -15,6 +15,7 @@ class ProductsController extends Controller
 
     	$productos = Producto::all();
     	return view('inicio', compact('productos'));
+        //jhonn
 
     }
 
