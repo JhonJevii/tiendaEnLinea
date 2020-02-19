@@ -44,6 +44,8 @@ class ProductsController extends Controller
 
         $mensaje = 'Producto registrado correctamente.';
 
+        //holii
+
         if($validatedData->fails())
         {
             return redirect()->back()->withInput()->withErrors($validatedData);
