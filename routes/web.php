@@ -15,3 +15,7 @@ Route::get('/', 'ProductsController@verProductos')->name('inicio');
 Route::get('registrar-producto', 'ProductsController@tablaProductos')->name('tabla.producto');
 
 Route::post('producto-ingresado', 'ProductsController@registrarProductos')->name('ingresar.productos');
+
+Route::get('registrar-categoria', 'CategoriesController@tablaCategoria')->name('tabla.categoria');
+
+Route::post('categoria-ingresado', 'CategoriesController@registrarCategoria')->name('ingresar.categoria');

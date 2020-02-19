@@ -130,9 +130,7 @@
 	                    <label></label>
 	                    <input type="submit" value="Grabar" name="btnGrabarProducto" class="form-control btn btn-info">
 
-		            </div>
-
-	            </fieldset>
+		            </div>	          
 	            
 	        </form>
 

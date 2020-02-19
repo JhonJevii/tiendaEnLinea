@@ -14,7 +14,7 @@
 			<ul>
 				<li><a href="{{ route('inicio') }}">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="{{ route('tabla.producto') }}">ingresar producto<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{ route('tabla.categoria') }}">Registrar Categoria<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
