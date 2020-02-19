@@ -20,4 +20,9 @@ class Producto extends Model
     ];
 
     protected $primaryKey = 'id';
+
+    public function categoria()
+    {
+       return $this->hasOne('App\Categoria', 'id', 'id'); 
+    }   
 }

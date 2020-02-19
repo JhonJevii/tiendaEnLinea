@@ -23,36 +23,49 @@
 
 	            @csrf
 
+	            @if ($mensaje = Session::get('mensajeVerde'))
+			        <div class="form-row col-md-12 alert alert-success estilo-success alert-dismissible fade show estilo-mensaje-verde" role="alert">
+			            {{ $mensaje }}
+			            <button type="button" class="close" data-dismiss="alert">&times;</button>
+			        </div>
+			    @endif
+
 	            <div class="form-row">
 
-	                <div class="col-md-1">
-	                    <label class="label-margin">Categoria</label>
-	                    <select name="categoria" class="form-control browser-default custom-select">
+				    @isset($categorias)
 
-							<option disabled>seleccionar</option>
-							@foreach($categorias as $item)
-								<option value="{{ $item->nombre }}" selected>{{ $item->nombre }}</option>
-							@endforeach
+		                <div class="col-md-1">
+		                    <label class="label-margin">Categoria</label>
+		                    <select name="categoria" id="categoria" class="form-control">
 
-						</select>
-	                </div>
+								<option value="-1">seleccionar</option>
+								@foreach($categorias as $item)
+									<option value="{!! $item->id !!}">{{ $item->nombre }}</option>
+								@endforeach
 
-	                <div class="col-md-8">
-	                    <label class="label-margin">Caracteristicas</label>
-	                    <select name="categoria" class="form-control browser-default custom-select">
+							</select>
+		                </div>
 
-	                    	<option disabled>seleccionar</option>
-							@foreach($caracteristicas as $item)
-								<option value="{{ $item->tipo }}" selected>{{ $item->tipo }}</option>
-							@endforeach
-							
-						</select>
-	                </div>
+					@endisset
+
+					@isset($categorias)
+
+		                <div class="col-md-8">
+		                    <label class="label-margin">Caracteristicas</label>
+		                    <select name="caracteristicas" id="caracteristicas" class="form-control">
+		                    	<option value="-1">seleccionar</option>
+								@foreach($caracteristicas as $item)	
+									<option value="{!! $item->id !!}">{{ $item->tipo }}</option>
+								@endforeach
+							</select>
+		                </div>
+
+		            @endisset
 
 	                <div class="col-md-3">
 						<div class="input-group">
 							<label class="control-label label-margin">Imagen del producto</label>
-							<input type="file" name="foto" id="foto" class="filestyle" 
+							<input type="file" name="imagen" id="foto" class="filestyle" 
 								   data-text="Seleccionar" 
 								   data-dragdrop="false" 
 								   data-btnClass="btn-dark"
@@ -66,12 +79,12 @@
 
 	                <div class="col-md-6">
 	                    <label class="label-margin">Nombre</label>
-	                    <input type="text" maxlength="100" name="nombres" class="form-control">
+	                    <input type="text" maxlength="100" name="nombre" class="form-control">
 	                </div>
 
 	                <div class="col-md-6">
 	                   <label class="label-margin">Descripción del producto</label>
-		                <textarea maxlength="200" name="descripcionDocumento" class="form-control" placeholder="descripción del producto"></textarea>
+		                <textarea maxlength="200" name="descripcionProducto" class="form-control" placeholder="descripción del producto"></textarea>
 	                </div>
 
 	            </div>
@@ -80,7 +93,7 @@
 
 		                <div class="col-md-4">
 		                    <label class="label-margin">Oferta</label>
-		                    <select name="categoria" class="form-control browser-default custom-select">
+		                    <select name="oferta" class="form-control browser-default custom-select">
 
 							<option disabled>seleccionar</option>
 							<option value="1" selected>si</option>
@@ -91,12 +104,12 @@
 
 		                <div class="col-md-4">
 		                    <label class="label-margin">Precio unitario</label>
-		                    <input type="text" maxlength="15" name="telefono2" class="form-control">
+		                    <input type="text" maxlength="15" name="precioUnitario" class="form-control">
 		                </div>
 
 		                <div class="col-md-4">
 		                    <label class="label-margin">Precio absoluto</label>
-		                    <input type="text" maxlength="15" name="telefono2" class="form-control">
+		                    <input type="text" maxlength="15" name="precioAbsoluto" class="form-control">
 		                </div>
 
 		            </div>
@@ -115,7 +128,7 @@
 		            <div class="row col-md-12 mt-3">
 
 	                    <label></label>
-	                    <input type="submit" value="Grabar" name="btnGrabarUser" class="form-control btn btn-info">
+	                    <input type="submit" value="Grabar" name="btnGrabarProducto" class="form-control btn btn-info">
 
 		            </div>
 
