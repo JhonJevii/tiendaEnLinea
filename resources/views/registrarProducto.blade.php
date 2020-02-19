@@ -117,9 +117,7 @@
 	                    <label></label>
 	                    <input type="submit" value="Grabar" name="btnGrabarUser" class="form-control btn btn-info">
 
-		            </div>
-
-	            </fieldset>
+		            </div>	          
 	            
 	        </form>
 
