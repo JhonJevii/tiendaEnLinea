@@ -42,7 +42,7 @@ class ProductsController extends Controller
 
         $producto = new Producto;
 
-        $mensaje = 'Producto registrado correctamente.';
+        $mensaje = 'Producto registrado correctamente..........';
 
         if($validatedData->fails())
         {
