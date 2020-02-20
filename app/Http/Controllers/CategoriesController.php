@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use App\Producto;
 use App\Categoria;
 use App\Caracteristica;
+use App\ImageCategory;
 use Input;
 
 class CategoriesController extends Controller
@@ -51,21 +52,22 @@ class CategoriesController extends Controller
             
             $categoria->nombre = $request->nombre;
             $categoria->descripcion = $request->descripcion;
-            if (Input::has('imagen'))
+            $categoria->save();
+            if ($request->hasfile('imagen'))
             {
 
-                $archivo = $categoria->imagen;
-                Storage::disk('public')->delete('\\fotosProductos\\' . $archivo);
-
                 $file = $request->file('imagen');
+                $path = $request->imagen->store('public/fotosCategorias');
+                //Storage::disk('public')->delete('\\fotosProductos\\' . $file);
                 $ext = $request->file('imagen')->getClientOriginalExtension();
                 $archivo = 'imagen-id-' . $categoria->id . '.' . $ext;
-                $categoria->imagen = strtolower($archivo);
-                Storage::disk('public')->put('\\fotosProductos\\' . $archivo, File::get($file));
+                $idCategoria = $categoria->id;
+                ImageCategory::create([
+                    'path' => $archivo,
+                    'idCategoria' => $idCategoria]);
+
             }
             
-            $categoria->save();
-
             $mensaje = 'Categoria registrada correctamente.';
 
             return redirect()->back()->with('mensajeVerde', $mensaje);
