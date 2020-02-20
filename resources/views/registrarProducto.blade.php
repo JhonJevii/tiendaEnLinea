@@ -38,7 +38,7 @@
 		                    <label class="label-margin">Categoria</label>
 		                    <select name="categoria" id="categoria" class="form-control">
 
-								<option value="-1">seleccionar</option>
+								<option value="1">seleccionar</option>
 								@foreach($categorias as $item)
 									<option value="{!! $item->id !!}">{{ $item->nombre }}</option>
 								@endforeach
@@ -53,7 +53,7 @@
 		                <div class="col-md-8">
 		                    <label class="label-margin">Caracteristicas</label>
 		                    <select name="caracteristicas" id="caracteristicas" class="form-control">
-		                    	<option value="-1">seleccionar</option>
+		                    	<option value="1">seleccionar</option>
 								@foreach($caracteristicas as $item)	
 									<option value="{!! $item->id !!}">{{ $item->tipo }}</option>
 								@endforeach

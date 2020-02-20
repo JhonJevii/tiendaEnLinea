@@ -17,7 +17,7 @@ class CreateProductosTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('idCategoria')->unsigned();
             $table->bigInteger('idCaracteristica')->unsigned();
-            $table->string('imagen', 100)->nullable();
+            //$table->string('imagen', 100)->nullable();
             $table->string('nombre');
             $table->string('descripcion');
             $table->boolean('oferta'); 

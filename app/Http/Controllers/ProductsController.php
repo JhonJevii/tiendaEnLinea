@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Producto;
 use App\Categoria;
 use App\Caracteristica;
+use App\Image;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 use Input;
 
 class ProductsController extends Controller
@@ -31,8 +31,6 @@ class ProductsController extends Controller
 
     public function registrarProductos(Request $request){
 
-        //dd($request->file('imagen'));
-
         $validatedData = Validator::make($request->all(),
             [
                 'categoria' => 'required',
@@ -49,29 +47,13 @@ class ProductsController extends Controller
 
         $mensaje = 'Producto registrado correctamente.';
 
-
         if($validatedData->fails())
         {
             return redirect()->back()->withInput()->withErrors($validatedData);
         }
         else{
-
             $producto->idCategoria = $request->categoria;
             $producto->idCaracteristica = $request->caracteristicas;
-            if (Input::has('imagen'))
-            {
-
-                $archivo = $producto->imagen;
-                Storage::disk('public')->delete('\\imagenProductos\\' . $archivo);
-                $file = $request->file('imagen');
-                $ext = $request->file('imagen')->getClientOriginalExtension();
-                
-                $archivo = 'imagen-id-' . $producto->id . '.' . $ext;
-                $producto->imagen = strtolower($archivo);
-                Storage::disk('public')->put('\\imagenProductos\\' . $archivo, File::get($file));
-
-            }
-
             $producto->nombre = $request->nombre;
             $producto->descripcion = $request->descripcionProducto;
             $producto->oferta = $request->oferta;
@@ -79,6 +61,31 @@ class ProductsController extends Controller
             $producto->precioAbsoluto = $request->precioAbsoluto;
 
             $producto->save();
+
+            if ($request->hasfile('imagen'))
+            {
+                $file = $request->file('imagen');
+                $path = $request->imagen->store('public/fotosProductos');
+                //Storage::disk('public')->delete('\\fotosProductos\\' . $file);
+                $ext = $request->file('imagen')->getClientOriginalExtension();
+                $archivo = 'imagen-id-' . $producto->id . '.' . $ext;
+                $idProducto = $producto->id;
+                Image::create([
+                    'path' => $archivo,
+                    'idProducto' => $idProducto]);
+
+                /*
+
+                $archivo = $producto->imagen;
+                Storage::disk('public')->delete('\\fotosProductos\\' . $archivo);
+
+                $file = $request->file('imagen');
+                $ext = $request->file('imagen')->getClientOriginalExtension();
+                $archivo = 'foto-id-' . $producto->id . '.' . $ext;
+                $producto->imagen = strtolower($imagen);
+                Storage::disk('public')->put('\\fotosProductos\\' . $archivo, File::get($file));*/
+
+            }
 
             return redirect()->back()->with('mensajeVerde', $mensaje);
         }
