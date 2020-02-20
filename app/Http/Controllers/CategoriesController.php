@@ -17,7 +17,7 @@ class CategoriesController extends Controller
     public function verCategoria(){
 
     	$categorias = Categoria::all();
-    	return view('inicio', compact('categorias'));
+    	return view('general.inicio', compact('categorias'));
 
     }
 
@@ -25,7 +25,7 @@ class CategoriesController extends Controller
 
     	$categorias = Categoria::all();
     	$caracteristicas = Caracteristica::all();
-    	return view('categorias', compact('categorias', 'caracteristicas'));
+    	return view('forms.registrarCategoria', compact('categorias', 'caracteristicas'));
 
     }
 

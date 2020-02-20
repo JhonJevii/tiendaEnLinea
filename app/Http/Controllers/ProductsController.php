@@ -16,8 +16,7 @@ class ProductsController extends Controller
     public function verProductos(){
 
     	$productos = Producto::all();
-    	return view('inicio', compact('productos'));
-        //jhonn
+    	return view('general.inicio', compact('productos'));
 
     }
 
@@ -25,7 +24,7 @@ class ProductsController extends Controller
 
     	$categorias = Categoria::all();
     	$caracteristicas = Caracteristica::all();
-    	return view('registrarProducto', compact('categorias', 'caracteristicas'));
+    	return view('forms.registrarProducto', compact('categorias', 'caracteristicas'));
 
     }
 

@@ -23,7 +23,7 @@
 		
 			@yield('content')
 
-			@include('footer')
+			@include('plantillas.base.footer')
 
 		</div>
 

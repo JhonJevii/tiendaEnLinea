@@ -70,8 +70,6 @@
 		</div>
 	</div>
 
-	
-
-  	@include('productos')
+  	@include('general.productos')
 
 @endsection
