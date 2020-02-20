@@ -23,6 +23,14 @@
                 enctype="multipart/form-data">
 
               @csrf
+
+                @if ($mensaje = Session::get('mensajeVerde'))
+                    <div class="form-row col-md-12 alert alert-success estilo-success alert-dismissible fade show estilo-mensaje-verde" role="alert">
+                        {{ $mensaje }}
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    </div>
+                @endif
+                
                 <div class="col-md-3">
                   <div class="input-group">
                     <label class="control-label label-margin">Imagen de la categoria</label>

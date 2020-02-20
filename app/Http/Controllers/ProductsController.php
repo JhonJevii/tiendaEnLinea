@@ -7,6 +7,8 @@ use App\Producto;
 use App\Categoria;
 use App\Caracteristica;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Input;
 
 class ProductsController extends Controller
@@ -29,6 +31,8 @@ class ProductsController extends Controller
 
     public function registrarProductos(Request $request){
 
+        //dd($request->file('imagen'));
+
         $validatedData = Validator::make($request->all(),
             [
                 'categoria' => 'required',
@@ -45,8 +49,6 @@ class ProductsController extends Controller
 
         $mensaje = 'Producto registrado correctamente.';
 
-        //holii
-        //¿?
 
         if($validatedData->fails())
         {
@@ -56,17 +58,17 @@ class ProductsController extends Controller
 
             $producto->idCategoria = $request->categoria;
             $producto->idCaracteristica = $request->caracteristicas;
-            if (Input::has('foto'))
+            if (Input::has('imagen'))
             {
 
                 $archivo = $producto->imagen;
-                Storage::disk('public')->delete('\\fotosProductos\\' . $archivo);
-
+                Storage::disk('public')->delete('\\imagenProductos\\' . $archivo);
                 $file = $request->file('imagen');
                 $ext = $request->file('imagen')->getClientOriginalExtension();
-                $archivo = 'foto-id-' . $producto->id . '.' . $ext;
-                $producto->imagen = strtolower($imagen);
-                Storage::disk('public')->put('\\fotosProductos\\' . $archivo, File::get($file));
+                
+                $archivo = 'imagen-id-' . $producto->id . '.' . $ext;
+                $producto->imagen = strtolower($archivo);
+                Storage::disk('public')->put('\\imagenProductos\\' . $archivo, File::get($file));
 
             }
 

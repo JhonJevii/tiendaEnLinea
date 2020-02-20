@@ -48,7 +48,7 @@
 
 					@endisset
 
-					@isset($categorias)
+					@isset($caracteristicas)
 
 		                <div class="col-md-8">
 		                    <label class="label-margin">Caracteristicas</label>
@@ -65,9 +65,9 @@
 	                <div class="col-md-3">
 						<div class="input-group">
 							<label class="control-label label-margin">Imagen del producto</label>
-							<input type="file" name="imagen" id="foto" class="filestyle" 
-								   data-text="Seleccionar" 
-								   data-dragdrop="false" 
+							<input type="file" name="imagen" id="imagen" class="filestyle" 
+								   data-text="Seleccionar"
+								   data-dragdrop="false"
 								   data-btnClass="btn-dark"
 								   data-placeholder="archivo no seleccionado">
 						</div>
