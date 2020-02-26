@@ -18,6 +18,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
+					
 					<div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
 					<div class="home_content_container">
 						<div class="home_content">
@@ -48,6 +49,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
+
 					<div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
 					<div class="home_content_container">
 						<div class="home_content">
@@ -69,8 +71,6 @@
 
 		</div>
 	</div>
-
-	
 
   	@include('productos')
 
