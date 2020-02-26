@@ -16,7 +16,7 @@
 
 				<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Administrar<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 
-				<ul class="collapse list-unstyled" id="homeSubmenu">
+				<ul class="collapse list-unstyled ml-3 mb-2" id="homeSubmenu">
 					<li><a href="{{ route('formulario.producto') }}">Registrar producto<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 					<li><a href="{{ route('formulario.categoria') }}">Registrar categoria<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 					<li><a href="{{ route('formulario.detalle') }}">Registrar detalle<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
@@ -24,10 +24,7 @@
 					<li><a href="{{ route('formulario.proveedor') }}">Registrar proveedor<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				</ul>
 			
-				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="#">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="#">categorias<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 			</ul>
 		</nav>
