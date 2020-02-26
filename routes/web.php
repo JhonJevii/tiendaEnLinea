@@ -11,7 +11,12 @@
 |
 */
 
+
 Route::get('/', 'GeneralController@verProductos')->name('inicio');
+
+Route::bind('producto', function($slug){
+	return App\Producto::where('slug', $slug)->first();
+});
 
 #----------------------------------------------------------------------------------------------------
 Route::get('registrar-producto', 'CreateController@formularioProductos')->name('formulario.producto');
@@ -22,6 +27,7 @@ Route::post('producto-ingresado', 'CreateController@registrarProductos')->name('
 Route::get('registrar-categoria', 'CreateController@formularioCategoria')->name('formulario.categoria');
 Route::post('categoria-ingresado', 'CreateController@registrarCategoria')->name('ingresar.categoria');
 #-----------------------------------------------------------------------------------------------------
+
 
 #--------------------------------------------------------------------------------------------------------
 Route::get('registrar-detalle', 'CreateController@formularioDetalle')->name('formulario.detalle');
@@ -37,3 +43,10 @@ Route::post('oferta-ingresado', 'CreateController@registrarOferta')->name('ingre
 Route::get('registrar-proveedor', 'CreateController@formularioProveedor')->name('formulario.proveedor');
 Route::post('proveedor-ingresado', 'CreateController@registrarProveedor')->name('ingresar.proveedor');
 #--------------------------------------------------------------------------------------------------------
+
+//-------- Carro de compras --------------------
+
+Route::get('mostrar-carro', 'CartController@mostar')->name('carro');
+
+Route::get('mostrar-carro-producto', 'CartController@adicionarProducto')->name('carro.adionar');
+

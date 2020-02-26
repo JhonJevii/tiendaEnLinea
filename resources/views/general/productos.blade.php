@@ -54,7 +54,7 @@
 
 		            <div class="modal-footer">
 
-                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="location.href = '#'">Comprar</button>
+                        <button type="button" class="btn btn-success" href ="{{ url('carro.adicionar') }}">Comprar</button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="location.href = '#'">Cerrar</button>
 
 		            </div>

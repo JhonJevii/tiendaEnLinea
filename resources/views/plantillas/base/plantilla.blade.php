@@ -14,7 +14,7 @@
 
 	</head>
 
-	<body>
+	<body class="animsition">
 
 		@yield('sideMenu')
 
