@@ -23,6 +23,7 @@
 					<li><a href="{{ route('formulario.oferta') }}">Registrar oferta<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 					<li><a href="{{ route('formulario.proveedor') }}">Registrar proveedor<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				</ul>
+				
 			
 				<li><a href="#">categorias<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
