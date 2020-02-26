@@ -26,7 +26,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('tabla.categoria') }}">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('formulario.categoria') }}">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('tabla.categoria') }}">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('formulario.categoria') }}">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('tabla.categoria') }}">Shop NOW!</a></div>
+							<div class="button button_shop home_button_shop trans_200_shop"><a href="{{ route('formulario.categoria') }}">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>

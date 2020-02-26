@@ -10,12 +10,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'ProductsController@verProductos')->name('inicio');
 
-Route::get('registrar-producto', 'ProductsController@tablaProductos')->name('tabla.producto');
+Route::get('/', 'GeneralController@verProductos')->name('inicio');
 
-Route::post('producto-ingresado', 'ProductsController@registrarProductos')->name('ingresar.productos');
+#----------------------------------------------------------------------------------------------------
+Route::get('registrar-producto', 'CreateController@formularioProductos')->name('formulario.producto');
+Route::post('producto-ingresado', 'CreateController@registrarProductos')->name('ingresar.productos');
+#-----------------------------------------------------------------------------------------------------
 
-Route::get('registrar-categoria', 'CategoriesController@tablaCategoria')->name('tabla.categoria');
+#-----------------------------------------------------------------------------------------------------
+Route::get('registrar-categoria', 'CreateController@formularioCategoria')->name('formulario.categoria');
+Route::post('categoria-ingresado', 'CreateController@registrarCategoria')->name('ingresar.categoria');
+#-----------------------------------------------------------------------------------------------------
 
-Route::post('categoria-ingresado', 'CategoriesController@registrarCategoria')->name('ingresar.categoria');
+#--------------------------------------------------------------------------------------------------------
+Route::get('registrar-detalle', 'CreateController@formularioDetalle')->name('formulario.detalle');
+Route::post('detalle-ingresado', 'CreateController@registrarDetalle')->name('ingresar.detalle');
+#--------------------------------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------------------------------
+Route::get('registrar-oferta', 'CreateController@formularioOferta')->name('formulario.oferta');
+Route::post('oferta-ingresado', 'CreateController@registrarOferta')->name('ingresar.oferta');
+#--------------------------------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------------------------------
+Route::get('registrar-proveedor', 'CreateController@formularioProveedor')->name('formulario.proveedor');
+Route::post('proveedor-ingresado', 'CreateController@registrarProveedor')->name('ingresar.proveedor');
+#--------------------------------------------------------------------------------------------------------

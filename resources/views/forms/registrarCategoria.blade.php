@@ -11,11 +11,11 @@
 <!-- Categories -->
  <div class="row col-md-12">
 
-      <div class="row col-md-12 mt-3">
-          <h4>REGISTRO DE CATEGORIAS</h4>
+      <div class="row col-md-12 mt-5 ml-5">
+          <h3>REGISTRO DE CATEGORIAS</h3>
       </div>
 
-      <div class="row col-md-12 mt-2">
+      <div class="row col-md-11 mt-5 ml-5">
 
           <form class="col-md-12" 
                 action="{{ route('ingresar.categoria') }}" 
@@ -30,31 +30,39 @@
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     </div>
                 @endif
-                
-                <div class="col-md-3">
-                  <div class="input-group">
-                    <label class="control-label label-margin">Imagen de la categoria</label>
-                    <input type="file" name="imagen" id="foto" class="filestyle" 
-                         data-text="Seleccionar" 
-                         data-dragdrop="false" 
-                         data-btnClass="btn-dark"
-                         data-placeholder="archivo no se|leccionado">
-                  </div>
-                </div>            
 
-              <div class="form-row">
-
+                <div class="form-row">
+                  
                   <div class="col-md-6">
+
+                    <div class="form-group col-md-12">
+
                       <label class="label-margin">Nombre</label>
                       <input type="text" maxlength="100" name="nombre" class="form-control">
-                  </div>
 
+                      <label class="label-margin mt-1">Imagen de la categoria</label>
+
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Seleccione Aqui...</label>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  
                   <div class="col-md-6">
-                     <label class="label-margin">Descripción de la caracteristica</label>
-                    <textarea maxlength="200" name="descripcion" class="form-control" placeholder="descripción del producto"></textarea>
+
+                    <div class="form-group col-md-12">
+
+                      <label class="label-margin">Descripción de la caracteristica</label>
+                      <textarea maxlength="200" rows="4" name="descripcion" class="form-control" placeholder="descripción del producto"></textarea>
+
+                    </div>
+
                   </div>
 
-              </div>
+              </div>       
 
               @if ($errors->any())
                   <div class="alert alert-danger col-md-12 mt-3 mb-1 pl-3 pr-3 alert-dismissible fade show">
@@ -67,7 +75,7 @@
                   </div>
               @endif
 
-                <div class="row col-md-12 mt-3">
+                <div class="row col-md-12 mt-3 mb-5">
 
                       <label></label>
                       <input type="submit" value="Grabar" name="btnGrabarCategory" class="form-control btn btn-info">

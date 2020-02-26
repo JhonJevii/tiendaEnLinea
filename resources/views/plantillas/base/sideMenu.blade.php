@@ -17,11 +17,11 @@
 				<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Administrar<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 
 				<ul class="collapse list-unstyled" id="homeSubmenu">
-					<li><a href="{{ route('tabla.producto') }}">Registrar producto<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-					<li><a href="{{ route('tabla.categoria') }}">Registrar categoria<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-					<li><a href="{{ route('tabla.categoria') }}">Registrar detalle<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-					<li><a href="{{ route('tabla.categoria') }}">Registrar oferta<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-					<li><a href="{{ route('tabla.categoria') }}">Registrar proveedor<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					<li><a href="{{ route('formulario.producto') }}">Registrar producto<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					<li><a href="{{ route('formulario.categoria') }}">Registrar categoria<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					<li><a href="{{ route('formulario.detalle') }}">Registrar detalle<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					<li><a href="{{ route('formulario.oferta') }}">Registrar oferta<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					<li><a href="{{ route('formulario.proveedor') }}">Registrar proveedor<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				</ul>
 			
 				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
