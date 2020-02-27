@@ -32,7 +32,7 @@
 
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
-			<div class="cart_icon"><a href="{{ url('carro') }}">
+			<div class="cart_icon"><a href="{{ route('carro.mostrar') }}">
 				<img src="images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div> 

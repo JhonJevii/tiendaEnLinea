@@ -12,7 +12,6 @@ class Producto extends Model
         'id',
         'idCategoria',
         'idCaracteristicas',
-        //'imagen',
         'nombre',
         'descripcion',
         'oferta',

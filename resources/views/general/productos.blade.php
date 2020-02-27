@@ -10,7 +10,7 @@
 		      <div class="card-product__img">
 		        <img class="card-img" src="images/product5.png" alt="">
 		        <ul class="card-product__imgOverlay">
-		          <li><button><i class="ti-search"></i></button></li>
+		          <li><button onclick="location.href = '{{ route('carro.adicionar', [ $producto->id ]) }}'"><i class="ti-search"></i></button></li>
 		          <li><button><i class="ti-shopping-cart"></i></button></li>
 		          <li><button><i class="ti-heart"></i></button></li>
 		        </ul>
@@ -54,7 +54,7 @@
 
 		            <div class="modal-footer">
 
-                        <button type="button" class="btn btn-success" href ="{{ url('carro.adicionar') }}">Comprar</button>
+                        <button type="button" class="btn btn-success" onclick="location.href = '#'">Comprar</button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="location.href = '#'">Cerrar</button>
 
 		            </div>
