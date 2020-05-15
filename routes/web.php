@@ -12,6 +12,20 @@
 */
 
 
+
+Route::bind('producto', function($slug){
+	return App\Producto::where('slug', $slug)->first();
+});
+
+Route::get('/', 'ProductsController@verProductos')->name('inicio');
+
+Route::get('carro', function () {
+    return view('cart');
+})->name('carro');
+
+Route::get('registrar-producto', 'ProductsController@tablaProductos')->name('tabla.producto');
+
+
 Route::get('/', 'GeneralController@verProductos')->name('inicio');
 
 #----------------------------------------------------------------------------------------------------
@@ -45,4 +59,14 @@ Route::post('proveedor-ingresado', 'CreateController@registrarProveedor')->name(
 Route::get('mostrar-carrito/{id}', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
 
 Route::get('agregar-carrito/{idProducto}/{precioUnitario}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
+
+
+
+Route::post('categoria-ingresado', 'CategoriesController@registrarCategoria')->name('ingresar.categoria');
+
+//-------- Carro de compras --------------------
+
+Route::get('mostrar-carro', 'CartController@mostar')->name('carro');
+
+Route::get('mostrar-carro-producto', 'CartController@adicionarProducto')->name('carro.adionar');
 
