@@ -40,7 +40,7 @@ class GeneralController extends Controller
                     "nombre" => $productos->nombre,
                     "cantidad" => 1,
                     "precio" => $productos->precioUnitario
-                    //"foto" => $productos->foto
+                    //"foto" => $productos->si la habilita debe ponerle la coma al anterio
                 ]
             ];
 
@@ -57,7 +57,7 @@ class GeneralController extends Controller
             "nombre" => $productos->nombre,
             "cantidad" => 1,
             "precio" => $productos->precioUnitario
-            //"foto" => $productos->foto   si la deshabilita dedebe ponerle la coma al anterio
+            //"foto" => $productos->si la habilita debe ponerle la coma al anterio
         ];
 
         session()->put('carrito', $carrito);
