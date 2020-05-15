@@ -128,7 +128,11 @@
 		            <div class="row col-md-12 mt-3">
 
 	                    <label></label>
-	                    <input type="submit" value="Grabar" name="btnGrabarProducto" class="form-control btn btn-info">
+
+	                    <!--input type="submit" value="Grabar" name="btnGrabarProducto" class="form-control btn btn-info">
+
+	                    <input type="submit" value="Grabar" name="btnGrabarUser" class="form-control btn btn-info"-->
+
 
 		            </div>	          
 	            
