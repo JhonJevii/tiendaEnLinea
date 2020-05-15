@@ -11,6 +11,7 @@ use App\Categoria;
 use App\Caracteristica;
 use App\ImageProduct;
 use App\ImageCategory;
+use App\Carrito;
 use Input;
 
 class CreateController extends Controller
@@ -21,7 +22,8 @@ class CreateController extends Controller
 
     	$categorias = Categoria::all();
     	$caracteristicas = Caracteristica::all();
-    	return view('forms.registrarProducto', compact('categorias', 'caracteristicas'));
+        $carrito = Carrito::all()->count();
+    	return view('forms.registrarProducto', compact('categorias', 'caracteristicas', 'carrito'));
 
     }
 
@@ -95,7 +97,8 @@ class CreateController extends Controller
 
     	$categorias = Categoria::all();
     	$caracteristicas = Caracteristica::all();
-    	return view('forms.registrarCategoria', compact('categorias', 'caracteristicas'));
+        $carrito = Carrito::all()->count();
+    	return view('forms.registrarCategoria', compact('categorias', 'caracteristicas', 'carrito'));
 
     }
 

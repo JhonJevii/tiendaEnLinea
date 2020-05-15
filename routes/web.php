@@ -42,6 +42,7 @@ Route::post('proveedor-ingresado', 'CreateController@registrarProveedor')->name(
 
 //-------- Carro de compras --------------------
 
-Route::get('mostrar-carro', 'CartController@mostrar')->name('carro.mostrar');
+Route::get('mostrar-carrito/{id}', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
 
-Route::get('mostrar-carro-producto/{idProducto}' , 'CartController@adicionarProducto')->name('carro.adicionar');
+Route::get('agregar-carrito/{idProducto}/{precioUnitario}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
+
