@@ -19,3 +19,4 @@ Route::post('producto-ingresado', 'ProductsController@registrarProductos')->name
 Route::get('registrar-categoria', 'CategoriesController@tablaCategoria')->name('tabla.categoria');
 
 Route::post('categoria-ingresado', 'CategoriesController@registrarCategoria')->name('ingresar.categoria');
+roynasjna
